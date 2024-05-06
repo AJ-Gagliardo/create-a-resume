@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Resume from "./resume";
 
 export default function Name() {
   const [firstName, setFirstName] = useState("");
@@ -24,9 +25,9 @@ export default function Name() {
         <label htmlFor="lastName">Last Name</label>
         <input name="lastName" onChange={handleLastName}></input>
       </div>
-      <h2>
+      {/* <h2>
         {firstName} {lastName}
-      </h2>
+      </h2> */}
     </div>
   );
 }

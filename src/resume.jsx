@@ -5,14 +5,18 @@ export default function Resume() {
   const [fullName, setFullName] = useState("");
 
   // Define a function to handle changes in the full name
-  function handleFullNameChange(newFullName) {
-    setFullName(newFullName);
+  // function handleFullNameChange(newFullName) {
+  //   setFullName(newFullName);
+  // }
+
+  function handleFullNameChange({ firstName }) {
+    setFullName(firstName);
+    console.log({ firstName });
   }
 
   return (
     <div>
-      <Name onFullNameChange={handleFullNameChange} />
-      {/* <h2>Full Name: {handleFullNameChange}</h2> */}
+      <h2>{fullName}</h2>
     </div>
   );
 }
