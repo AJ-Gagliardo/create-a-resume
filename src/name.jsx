@@ -1,18 +1,20 @@
 import { useState } from "react";
 import Resume from "./resume";
 
-export default function Name() {
-  const [firstName, setFirstName] = useState("");
+export default function Name({ handleFullNameChange }) {
+  const [firstName, setFirstName] = useState("A");
   const [lastName, setLastName] = useState("");
 
   function handleFirstName(e) {
     setFirstName(e.target.value);
+    handleFullNameChange(`${firstName} ${lastName}`);
 
-    // console.log(firstName);
+    // console.log(firstName);9
   }
 
   function handleLastName(e) {
     setLastName(e.target.value);
+    handleFullNameChange(`${firstName} ${lastName}`);
   }
 
   return (
@@ -25,9 +27,9 @@ export default function Name() {
         <label htmlFor="lastName">Last Name</label>
         <input name="lastName" onChange={handleLastName}></input>
       </div>
-      {/* <h2>
+      <h2>
         {firstName} {lastName}
-      </h2> */}
+      </h2>
     </div>
   );
 }
