@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Name from "./name";
 import Resume from "./resume";
+import PersonalDetails from "./personaldDetails";
 
 export default function App() {
   const [fullName, setFullName] = useState("Antonio Gagliardo");
@@ -19,13 +20,16 @@ export default function App() {
   return (
     <>
       <div id="leftSide">
-        <h1>Inputs</h1>
-        <Name
-          fullName={fullName}
-          setFullName={setFullName}
-          handleFullNameChange={handleFullNameChange}
-          defaultData={defaultData}
-        />
+        <h2>Personal Details</h2>
+        <div id="personalDetails">
+          <Name
+            fullName={fullName}
+            setFullName={setFullName}
+            handleFullNameChange={handleFullNameChange}
+            defaultData={defaultData}
+          />
+          <PersonalDetails />
+        </div>
       </div>
       <div id="rightSide">
         <h2>Resume Info</h2>

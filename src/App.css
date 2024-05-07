@@ -42,6 +42,14 @@
   background-color: beige;
   width: 33vw;
   height: 100vh;
+  /* display: grid; */
+}
+#personalDetails {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 2px;
+  text-align: left;
 }
 
 #rightSide {

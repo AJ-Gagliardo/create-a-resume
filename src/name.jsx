@@ -20,8 +20,8 @@ export default function Name({ handleFullNameChange, defaultData }) {
   }
 
   return (
-    <div>
-      <div>
+    <>
+      <>
         <label htmlFor="firstName">First Name</label>
         <input
           name="firstName"
@@ -29,8 +29,8 @@ export default function Name({ handleFullNameChange, defaultData }) {
           placeholder="Antonio"
           value={firstName}
         ></input>
-      </div>
-      <div>
+      </>
+      <>
         <label htmlFor="lastName">Last Name</label>
         <input
           name="lastName"
@@ -38,7 +38,7 @@ export default function Name({ handleFullNameChange, defaultData }) {
           placeholder="Gagliardo"
           value={lastName}
         ></input>
-      </div>
-    </div>
+      </>
+    </>
   );
 }
