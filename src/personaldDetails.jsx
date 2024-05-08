@@ -1,6 +1,14 @@
 import { useState } from "react";
 
-export default function PersonalDetails() {
+export default function PersonalDetails({ setEmail }) {
+  // handleSetEmail(){
+
+  // }
+
+  // handleSetPhoneNumber(){}
+
+  // handleSetAddress()
+
   return (
     <>
       <label htmlFor="email">Email</label>
@@ -9,6 +17,8 @@ export default function PersonalDetails() {
       <input name="phone"></input>
       <label htmlFor="address">Address</label>
       <input name="address"></input>
+      <label htmlFor="website">Personal Website</label>
+      <input name="website"></input>
     </>
   );
 }

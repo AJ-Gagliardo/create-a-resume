@@ -6,6 +6,10 @@ import PersonalDetails from "./personaldDetails";
 
 export default function App() {
   const [fullName, setFullName] = useState("Antonio Gagliardo");
+  const [email, setEmail ] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [website, setWebsite] = useState("");
 
   const defaultData = {
     defaultFirstName: "Antonio",
@@ -28,7 +32,9 @@ export default function App() {
             handleFullNameChange={handleFullNameChange}
             defaultData={defaultData}
           />
-          <PersonalDetails />
+          <PersonalDetails setEmail={setEmail} 
+          setPhoneNumber = {setPhoneNumber} 
+          setAddress={setAddress} setWebsite={setWebsite} />
         </div>
       </div>
       <div id="rightSide">
