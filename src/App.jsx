@@ -3,6 +3,7 @@ import "./App.css";
 import Name from "./name";
 import Resume from "./resume";
 import PersonalDetails from "./personaldDetails";
+import Education from "./education";
 
 export default function App() {
   const [fullName, setFullName] = useState("Antonio Gagliardo");
@@ -10,6 +11,12 @@ export default function App() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [address, setAddress] = useState("");
   const [website, setWebsite] = useState("");
+
+  const [schoolNumber, setSchoolNumber] = useState(1); // want to use this to add school numbers later
+
+  const [schoolName, setSchoolName] = useState("");
+  const [major, setMajor] = useState("");
+  const [graduationDate, setGraduationDate] = useState("");
 
   const defaultData = {
     defaultFirstName: "Antonio",
@@ -38,6 +45,14 @@ export default function App() {
             setPhoneNumber={setPhoneNumber}
             setAddress={setAddress}
             setWebsite={setWebsite}
+          />
+        </div>
+        <h2>Education</h2>
+        <div id="educationSection">
+          <Education
+            setSchoolName={setSchoolName}
+            setMajor={setMajor}
+            setGraduationDate={setGraduationDate}
           />
         </div>
       </div>
