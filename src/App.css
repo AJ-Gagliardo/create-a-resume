@@ -4,8 +4,27 @@
   /* padding: 2rem; */
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 6px;
 }
+
+/* colors
+.first-color { 
+	background: #272343; 
+}
+	
+.second-color { 
+	background: #ffffff; 
+}
+
+.third-color { 
+	background: #e3f6f5; 
+}
+
+.fourth-color { 
+	background: #bae8e8; 
+}
+ */
 
 .logo {
   height: 6em;
@@ -41,6 +60,7 @@
   /* flex: 1; */
   background-color: beige;
   width: 33vw;
+
   height: 100vh;
   /* display: grid; */
 }
@@ -54,7 +74,7 @@
 
 #rightSide {
   /* flex: 2; */
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,0 +1,10 @@
+/* Resume */
+.oneRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 6px;
+}
+
+#resumeHead {
+  background-color: #e3f6f5;
+}

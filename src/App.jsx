@@ -44,7 +44,13 @@ export default function App() {
       <div id="rightSide">
         <h2>Resume Info</h2>
         <div className="box"></div>
-        <Resume fullName={fullName} />
+        <Resume
+          fullName={fullName}
+          email={email}
+          phoneNumber={phoneNumber}
+          address={address}
+          website={website}
+        />
       </div>
     </>
   );
