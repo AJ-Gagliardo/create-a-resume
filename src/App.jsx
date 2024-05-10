@@ -18,6 +18,11 @@ export default function App() {
   const [major, setMajor] = useState("");
   const [graduationDate, setGraduationDate] = useState("");
 
+  // collapse
+
+  const [showPersonalInformation, setShowPersonalInformation] = useState(true);
+  const [showEducation, setShowEducation] = useState(false);
+
   const defaultData = {
     defaultFirstName: "Antonio",
     defaultLastName: "Gagliardo",
@@ -32,6 +37,7 @@ export default function App() {
     <>
       <div id="leftSide">
         <h2>Personal Details</h2>
+        <button>{showPersonalInformation ? "<" : "v"} </button>
         <div id="personalDetails">
           <Name
             fullName={fullName}
