@@ -33,12 +33,26 @@ export default function App() {
     // console.log(firstName);
   }
 
+  //collapse  sections
+  function handleCollapseDetails() {
+    setShowPersonalInformation(!showPersonalInformation);
+  }
+  function collapseEducation() {}
+
   return (
     <>
       <div id="leftSide">
-        <h2>Personal Details</h2>
-        <button>{showPersonalInformation ? "<" : "v"} </button>
-        <div id="personalDetails">
+        <div className="inputHeader">
+          <h2>Personal Details</h2>
+          <button onClick={handleCollapseDetails}>
+            {showPersonalInformation ? "<" : "v"}{" "}
+          </button>
+        </div>
+        <div
+          id="personalDetails"
+          className={showPersonalInformation ? "" : "hide"}
+          style={{ display: showPersonalInformation ? "grid" : "none" }}
+        >
           <Name
             fullName={fullName}
             setFullName={setFullName}

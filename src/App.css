@@ -73,6 +73,19 @@
   text-align: left;
 }
 
+.inputHeader {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+
+  align-items: center;
+  align-content: center;
+}
+
+.inputHeader button {
+  /* height: 40%; */
+  align-content: center;
+  text-align: center;
+}
 #rightSide {
   /* flex: 2; */
   /* background-color: blanchedalmond; */
