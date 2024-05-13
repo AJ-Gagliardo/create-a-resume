@@ -80,7 +80,7 @@ export default function App() {
         </div>
         <h2>Experience</h2>
 
-        <Experience setExperience={setExperience} />
+        <Experience setExperience={setExperience} experience={experience} />
       </div>
       <div id="rightSide">
         <h2>Resume Info</h2>

@@ -22,6 +22,18 @@ export default function Experience({ setExperience }) {
     console.log(formData);
   }
 
+  function handleSubmitExperience() {
+    setExperience((experience) => [...experience, formData]);
+    setFormData({
+      companyName: "",
+      position: "",
+      start: "",
+      end: "",
+      location: "",
+      description: "",
+    });
+  }
+
   return (
     <>
       <form id="experienceSection">
@@ -37,6 +49,7 @@ export default function Experience({ setExperience }) {
         <input name="location" onChange={handleFormData}></input>
         <label htmlFor="description">Description</label>
         <input name="description" onChange={handleFormData}></input>
+        <buton onClick={handleSubmitExperience}>Submit Experience</buton>
       </form>
     </>
   );
