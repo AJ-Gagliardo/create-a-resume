@@ -13,24 +13,6 @@ export default function Resume({
   graduationDate,
   experience,
 }) {
-  function mapExperience({ experience }) {
-    return (
-      <div>
-        {experience.map((indvExp, index) => (
-          <div key={index}>
-            {indvExp.companyName}
-            {indvExp.position}
-            {indvExp.start}
-            {indvExp.end}
-            {indvExp.location}
-            {indvExp.description}
-          </div>
-        ))}
-        ;
-      </div>
-    );
-  }
-
   return (
     <>
       <div id="resumeHead">
@@ -58,7 +40,9 @@ export default function Resume({
         </div>
       </div>
       <h2>Experience</h2>
-      <div></div>
+      <div>
+        <MapExperience />
+      </div>
     </>
   );
 }
