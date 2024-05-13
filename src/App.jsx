@@ -94,6 +94,7 @@ export default function App() {
           schoolName={schoolName}
           major={major}
           graduationDate={graduationDate}
+          experience={experience}
         />
       </div>
     </>

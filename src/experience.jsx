@@ -22,34 +22,61 @@ export default function Experience({ setExperience }) {
     console.log(formData);
   }
 
-  function handleSubmitExperience() {
+  function handleSubmitExperience(e) {
+    e.preventDefault();
     setExperience((experience) => [...experience, formData]);
-    setFormData({
-      companyName: "",
-      position: "",
-      start: "",
-      end: "",
-      location: "",
-      description: "",
-    });
+    setFormData(emptyForm);
+    // setFormData({
+    //   companyName: "",
+    //   position: "",
+    //   start: "",
+    //   end: "",
+    //   location: "",
+    //   description: "",
+    // });
   }
 
   return (
     <>
-      <form id="experienceSection">
+      <form id="experienceSection" onSubmit={handleSubmitExperience}>
         <label htmlFor="companyName">CompanyName</label>
-        <input name="companyName" onChange={handleFormData}></input>
+        <input
+          name="companyName"
+          onChange={handleFormData}
+          value={formData.companyName}
+          // onSubmit={(value = "")}
+        ></input>
         <label htmlFor="position">Position Title</label>
-        <input name="position" onChange={handleFormData}></input>
+        <input
+          name="position"
+          onChange={handleFormData}
+          value={formData.position}
+        ></input>
         <label htmlFor="start">Start Date</label>
-        <input name="start" onChange={handleFormData}></input>
+        <input
+          name="start"
+          onChange={handleFormData}
+          value={formData.start}
+        ></input>
         <label htmlFor="end">End Date</label>
-        <input name="end" onChange={handleFormData}></input>
+        <input
+          name="end"
+          onChange={handleFormData}
+          value={formData.end}
+        ></input>
         <label htmlFor="location">Location</label>
-        <input name="location" onChange={handleFormData}></input>
+        <input
+          name="location"
+          onChange={handleFormData}
+          value={formData.location}
+        ></input>
         <label htmlFor="description">Description</label>
-        <input name="description" onChange={handleFormData}></input>
-        <buton onClick={handleSubmitExperience}>Submit Experience</buton>
+        <input
+          name="description"
+          onChange={handleFormData}
+          value={formData.description}
+        ></input>
+        <button onClick="submit">Submit Experience</button>
       </form>
     </>
   );
@@ -64,3 +91,5 @@ export default function Experience({ setExperience }) {
 //a function to handle the change and update the form
 //a submit button in which i add all the form data into Set experience example setExperience(...experience, formData)
 //reset the form to avoid having values that are not seeing
+
+// search about bootstrap *****
