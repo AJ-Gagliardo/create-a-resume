@@ -18,3 +18,13 @@ export default function Experience({ setExperience }) {
     </>
   );
 }
+
+/// ok this section gonna be moer challenging for em
+
+/// ideas:
+
+/// do a useState in which i have to put all the value of the form...
+// example const [formData, setFormData ] = useState({companyName: '', position: '',.... etc})
+//a function to handle the change and update the form
+//a submit button in which i add all the form data into Set experience example setExperience(...experience, formData)
+//reset the form to avoid having values that are not seeing
