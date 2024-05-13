@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Name from "./name";
+
 import "./resume.css";
 
 export default function Resume({
@@ -8,6 +8,9 @@ export default function Resume({
   phoneNumber,
   address,
   website,
+  schoolName,
+  major,
+  graduationDate,
 }) {
   return (
     <>
@@ -22,6 +25,17 @@ export default function Resume({
           <h4>
             <a href={website}>{website}</a>
           </h4>
+        </div>
+        <hr></hr>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <hr></hr>
+
+        <h3>{schoolName}</h3>
+        <div className="oneFlex">
+          <p>{major}</p>
+          <p>{graduationDate}</p>
         </div>
       </div>
     </>

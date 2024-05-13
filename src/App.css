@@ -1,10 +1,11 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   /* padding: 2rem; */
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  /* grid-template-columns: 1fr 6fr; */
+  grid-template-columns: 1fr 4fr;
   column-gap: 6px;
 }
 
@@ -59,18 +60,21 @@
 #leftSide {
   /* flex: 1; */
   background-color: beige;
-  width: 33vw;
 
   height: 100vh;
   /* display: grid; */
 }
 #personalDetails,
-#educationSection {
+#educationSection,
+#experienceSection {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
   margin: 2px;
   text-align: left;
+}
+input {
+  width: 250;
 }
 
 .inputHeader {
@@ -89,6 +93,7 @@
 #rightSide {
   /* flex: 2; */
   /* background-color: blanchedalmond; */
+  /* width: 100%; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
