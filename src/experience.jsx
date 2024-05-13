@@ -1,19 +1,42 @@
+import { useState } from "react";
+
 export default function Experience({ setExperience }) {
+  const emptyForm = {
+    companyName: "",
+    position: "",
+    start: "",
+    end: "",
+    location: "",
+    description: "",
+  };
+  const [formData, setFormData] = useState(emptyForm);
+
+  function handleFormData(e) {
+    // const data = e.target.value
+    //   setFormData(...formData, )
+    // const name = e.target.name;
+    // const value = e.targe.value;
+    const { name, value } = e.target;
+    console.log(e.target.value);
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    console.log(formData);
+  }
+
   return (
     <>
       <form id="experienceSection">
-        <label htmlFor="companyName">Company Name</label>
-        <input name="Company Name"></input>
+        <label htmlFor="companyName">CompanyName</label>
+        <input name="companyName" onChange={handleFormData}></input>
         <label htmlFor="position">Position Title</label>
-        <input name="position"></input>
+        <input name="position" onChange={handleFormData}></input>
         <label htmlFor="start">Start Date</label>
-        <input name="start"></input>
+        <input name="start" onChange={handleFormData}></input>
         <label htmlFor="end">End Date</label>
-        <input name="end"></input>
+        <input name="end" onChange={handleFormData}></input>
         <label htmlFor="location">Location</label>
-        <input name="location"></input>
+        <input name="location" onChange={handleFormData}></input>
         <label htmlFor="description">Description</label>
-        <input name="description"></input>
+        <input name="description" onChange={handleFormData}></input>
       </form>
     </>
   );
