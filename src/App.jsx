@@ -15,9 +15,9 @@ export default function App() {
 
   // const [schoolNumber, setSchoolNumber] = useState(1); // want to use this to add school numbers later
 
-  const [schoolName, setSchoolName] = useState("");
-  const [major, setMajor] = useState("");
-  const [graduationDate, setGraduationDate] = useState("");
+  const [schoolName, setSchoolName] = useState("University Canada West");
+  const [major, setMajor] = useState("Master in Business Administration");
+  const [graduationDate, setGraduationDate] = useState("2024");
 
   // collapse
 
@@ -109,6 +109,9 @@ export default function App() {
             setSchoolName={setSchoolName}
             setMajor={setMajor}
             setGraduationDate={setGraduationDate}
+            schoolName={schoolName}
+            major={major}
+            graduationDate={graduationDate}
           />
         </div>
         <h2>Experience</h2>

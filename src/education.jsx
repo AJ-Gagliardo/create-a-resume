@@ -17,6 +17,10 @@ export default function Education({
   setSchoolName,
   setMajor,
   setGraduationDate,
+
+  schoolName,
+  major,
+  graduationDate,
 }) {
   function handleSetSchoolName(e) {
     const value = e.target.value;
@@ -39,11 +43,19 @@ export default function Education({
       <label htmlFor="school1" placeholder="ie. XYZ University">
         School Name
       </label>
-      <input name="school1" onChange={handleSetSchoolName}></input>
+      <input
+        name="school1"
+        onChange={handleSetSchoolName}
+        value={schoolName}
+      ></input>
       <label htmlFor="major1">Major</label>
-      <input name="major1" onChange={handleMajorName}></input>
+      <input name="major1" onChange={handleMajorName} value={major}></input>
       <label htmlFor="dateGraduation1">Date of Graduation</label>
-      <input name="dateGraduation1" onChange={handleSetGraduationDate}></input>
+      <input
+        name="dateGraduation1"
+        onChange={handleSetGraduationDate}
+        value={graduationDate}
+      ></input>
     </>
   );
 }
