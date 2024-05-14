@@ -109,3 +109,11 @@ input {
 .read-the-docs {
   color: #888;
 }
+
+hr {
+  width: 95%;
+}
+
+#textbox {
+  height: 70px;
+}

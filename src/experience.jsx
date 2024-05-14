@@ -72,11 +72,13 @@ export default function Experience({ setExperience }) {
         ></input>
         <label htmlFor="description">Description</label>
         <input
+          id="textbox"
+          type="textbox"
           name="description"
           onChange={handleFormData}
           value={formData.description}
         ></input>
-        <button>Submit Experience</button>
+        <button type="submit">Submit Experience</button>
       </form>
     </>
   );

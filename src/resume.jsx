@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./resume.css";
+import MapExperience from "./mapExperience";
 
 export default function Resume({
   fullName,
@@ -40,7 +41,10 @@ export default function Resume({
         </div>
       </div>
       <h2>Experience</h2>
-      <div>{/* <MapExperience /> */}</div>
+      <hr></hr>
+      <div>
+        <MapExperience experience={experience} />
+      </div>
     </>
   );
 }
