@@ -8,10 +8,10 @@ import Experience from "./experience";
 
 export default function App() {
   const [fullName, setFullName] = useState("Antonio Gagliardo");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [website, setWebsite] = useState("");
+  const [email, setEmail] = useState("ajgagliardo27@gmail.com");
+  const [phoneNumber, setPhoneNumber] = useState("+1(236)863 2759");
+  const [address, setAddress] = useState("Vancouver, Canada");
+  const [website, setWebsite] = useState("www.aj-gagliardo.github.io");
 
   // const [schoolNumber, setSchoolNumber] = useState(1); // want to use this to add school numbers later
 
@@ -29,7 +29,37 @@ export default function App() {
   const defaultData = {
     defaultFirstName: "Antonio",
     defaultLastName: "Gagliardo",
+    defaultEmail: "ajgagliardo27@gmail.com",
+    defaultPhone: "+1(236)863 2759",
+    defaultAddress: "Vancouver, Canada",
+    defaultWebsite: "www.aj-gagliardo.github.io",
+
+    defaultEducation: "University Canada West",
+    defaultMajor: "Master in Business Administration",
+    defaultGraduation: 2023,
   };
+
+  const defaultExperience = [
+    {
+      companyName: "Factors Group",
+      position: "Operations Assistant",
+      start: "March/2024",
+      end: "current",
+      location: "Coquitlam, Canada",
+      description:
+        "Worked in a cross-functional team to streamline operations proccesses through data-driven insights",
+    },
+
+    {
+      companyName: "Contraloria General del Estado",
+      position: "Training and Development / Administration Specialist",
+      start: "August/2016",
+      end: "August/2021",
+      location: "Guayaquil, Ecuador",
+      description:
+        "State owned entity who controls all other government entities, facilitated training and development, managed attendance control systems, retrieved data from SQL and made reports",
+    },
+  ];
 
   function handleFullNameChange(e) {
     setFullName(e);
@@ -66,8 +96,11 @@ export default function App() {
             setEmail={setEmail}
             email={email}
             setPhoneNumber={setPhoneNumber}
+            phoneNumber={phoneNumber}
             setAddress={setAddress}
+            address={address}
             setWebsite={setWebsite}
+            website={website}
           />
         </div>
         <h2>Education</h2>

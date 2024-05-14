@@ -9,6 +9,7 @@ export default function Experience({ setExperience }) {
     location: "",
     description: "",
   };
+
   const [formData, setFormData] = useState(emptyForm);
 
   function handleFormData(e) {

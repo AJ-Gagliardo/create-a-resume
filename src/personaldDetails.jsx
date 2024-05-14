@@ -5,6 +5,11 @@ export default function PersonalDetails({
   setPhoneNumber,
   setAddress,
   setWebsite,
+
+  email,
+  phoneNumber,
+  address,
+  website,
 }) {
   function handleSetEmail(e) {
     const value = e.target.value;
@@ -30,13 +35,17 @@ export default function PersonalDetails({
   return (
     <>
       <label htmlFor="email">Email</label>
-      <input name="email" onChange={handleSetEmail}></input>
+      <input name="email" onChange={handleSetEmail} value={email}></input>
       <label htmlFor="phone">Phone Number</label>
-      <input name="phone" onChange={handleSetPhoneNumber}></input>
+      <input
+        name="phone"
+        onChange={handleSetPhoneNumber}
+        value={phoneNumber}
+      ></input>
       <label htmlFor="address">Address</label>
-      <input name="address" onChange={handleSetAddress}></input>
+      <input name="address" onChange={handleSetAddress} value={address}></input>
       <label htmlFor="website">Personal Website</label>
-      <input name="website" onChange={handleSetWebsite}></input>
+      <input name="website" onChange={handleSetWebsite} value={website}></input>
     </>
   );
 }
