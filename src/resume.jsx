@@ -40,9 +40,7 @@ export default function Resume({
         </div>
       </div>
       <h2>Experience</h2>
-      <div>
-        <MapExperience />
-      </div>
+      <div>{/* <MapExperience /> */}</div>
     </>
   );
 }
