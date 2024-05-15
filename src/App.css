@@ -61,7 +61,7 @@
   /* flex: 1; */
   background-color: beige;
 
-  height: 100vh;
+  /* height: 100vh; */
   /* display: grid; */
 }
 #personalDetails,
@@ -116,4 +116,18 @@ hr {
 
 #textbox {
   height: 70px;
+}
+
+#expBtn {
+  background-color: #888;
+  color: white;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    /* background-color: lightblue; */
+  }
 }

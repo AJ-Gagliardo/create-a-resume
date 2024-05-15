@@ -79,7 +79,9 @@ export default function Experience({ setExperience }) {
           onChange={handleFormData}
           value={formData.description}
         ></input>
-        <button type="submit">Submit Experience</button>
+        <button type="submit" id="expBtn">
+          Submit Experience
+        </button>
       </form>
     </>
   );
