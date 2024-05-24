@@ -87,6 +87,18 @@ export default function Experience({ setExperience }) {
   );
 }
 
+function ManageExperience({ experience, setExperience }) {
+  console.log("asd");
+  // console.log(experience.length);
+  // return (
+  //   <div>
+  //     {experience.map((job, index) => (
+  //       <div>{job.companyName}</div>
+  //     ))}
+  //   </div>
+  // );
+}
+
 /// ok this section gonna be moer challenging for em
 
 /// ideas:

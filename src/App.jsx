@@ -66,6 +66,24 @@ export default function App() {
     // console.log(firstName);
   }
 
+  // have to add onClick to button with a handle function related to get the job out of the company
+  function ManageExperience() {
+    function handleDeleteExperience() {}
+
+    console.log(experience.length);
+    return (
+      <div>
+        {experience.map((job, index) => (
+          // <div key={index}>{experience.companyName}</div>
+          <div>
+            {job.companyName}
+            <button>X</button>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   //collapse  sections
   function handleCollapseDetails() {
     setShowPersonalInformation(!showPersonalInformation);
@@ -117,6 +135,7 @@ export default function App() {
         <h2>Experience</h2>
 
         <Experience setExperience={setExperience} experience={experience} />
+        <ManageExperience />
       </div>
       <div id="rightSide">
         <h2>Resume Info</h2>

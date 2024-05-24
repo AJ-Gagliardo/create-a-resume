@@ -124,6 +124,10 @@ hr {
   font-weight: 600;
 }
 
+#expBtn:hover {
+  background-color: crimson;
+}
+
 @media only screen and (max-width: 600px) {
   #root {
     display: flex;
