@@ -87,9 +87,9 @@ export default function App() {
     console.log(experience.length);
     return (
       <div>
-        {experience.map((job) => (
+        {experience.map((job, id) => (
           // <div key={index}>{experience.companyName}</div>
-          <div>
+          <div key={id}>
             {job.companyName}
             <button onClick={() => handleDeleteExperience(job.id)}>X</button>
           </div>

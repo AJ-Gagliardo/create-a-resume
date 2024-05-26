@@ -50,12 +50,16 @@ export default function Experience({ setExperience }) {
           onChange={handleFormData}
           value={formData.companyName}
           // onSubmit={(value = "")}
+          minLength="5"
+          required
         ></input>
         <label htmlFor="position">Position Title</label>
         <input
           name="position"
           onChange={handleFormData}
           value={formData.position}
+          minLength="5"
+          required
         ></input>
         <label htmlFor="start">Start Date</label>
         <input
@@ -74,6 +78,8 @@ export default function Experience({ setExperience }) {
           name="location"
           onChange={handleFormData}
           value={formData.location}
+          minLength="5"
+          required
         ></input>
         <label htmlFor="description">Description</label>
         <input
@@ -82,6 +88,8 @@ export default function Experience({ setExperience }) {
           name="description"
           onChange={handleFormData}
           value={formData.description}
+          minLength="12"
+          required
         ></input>
         <button type="submit" id="expBtn">
           Submit Experience
