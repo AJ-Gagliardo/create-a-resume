@@ -102,16 +102,18 @@ export default function App() {
   function handleCollapseDetails() {
     setShowPersonalInformation(!showPersonalInformation);
   }
-  function collapseEducation() {}
+  function collapseEducation() {
+    setShowEducation(!showEducation);
+  }
 
   return (
     <>
       <div id="leftSide">
         <div className="inputHeader">
           <h2>Personal Details</h2>
-          <button onClick={handleCollapseDetails}>
+          {/* <button onClick={handleCollapseDetails}>
             {showPersonalInformation ? "<" : "v"}{" "}
-          </button>
+          </button> */}
         </div>
         <div
           id="personalDetails"
@@ -135,8 +137,17 @@ export default function App() {
             website={website}
           />
         </div>
-        <h2>Education</h2>
-        <div id="educationSection">
+        <div className="inputHeader">
+          <h2>Education</h2>
+          {/* <button onClick={collapseEducation}>
+            {showEducation ? "<" : "v"}
+          </button> */}
+        </div>
+        <div
+          id="educationSection"
+          className={collapseEducation ? "" : "hide"}
+          style={{ display: collapseEducation ? "grid" : "none" }}
+        >
           <Education
             setSchoolName={setSchoolName}
             setMajor={setMajor}
