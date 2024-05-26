@@ -8,6 +8,7 @@ export default function Experience({ setExperience }) {
     end: "",
     location: "",
     description: "",
+    id: "",
   };
 
   const [formData, setFormData] = useState(emptyForm);
@@ -25,6 +26,7 @@ export default function Experience({ setExperience }) {
 
   function handleSubmitExperience(e) {
     e.preventDefault();
+
     setExperience((experience) => [...experience, formData]);
     setFormData(emptyForm);
     // setFormData({
@@ -85,18 +87,6 @@ export default function Experience({ setExperience }) {
       </form>
     </>
   );
-}
-
-function ManageExperience({ experience, setExperience }) {
-  console.log("asd");
-  // console.log(experience.length);
-  // return (
-  //   <div>
-  //     {experience.map((job, index) => (
-  //       <div>{job.companyName}</div>
-  //     ))}
-  //   </div>
-  // );
 }
 
 /// ok this section gonna be moer challenging for em

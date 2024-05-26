@@ -67,8 +67,13 @@ export default function App() {
   }
 
   // have to add onClick to button with a handle function related to get the job out of the company
-  function ManageExperience() {
-    function handleDeleteExperience() {}
+  function ManageExperience(indexToDelete) {
+    function handleDeleteExperience() {
+      const changeExp = experience.filter(
+        (jobs, index) => index !== indexToDelete
+      );
+      setExperience(changeExp);
+    }
 
     console.log(experience.length);
     return (
@@ -77,7 +82,7 @@ export default function App() {
           // <div key={index}>{experience.companyName}</div>
           <div>
             {job.companyName}
-            <button>X</button>
+            <button onClick={handleDeleteExperience}>X</button>
           </div>
         ))}
       </div>
