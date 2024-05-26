@@ -21,6 +21,8 @@ export default function Experience({ setExperience }) {
     const { name, value } = e.target;
     console.log(e.target.value);
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    setFormData((prevFormData) => ({ ...prevFormData, id: Date.now() }));
+
     console.log(formData);
   }
 

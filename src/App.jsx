@@ -19,26 +19,6 @@ export default function App() {
   const [major, setMajor] = useState("Master in Business Administration");
   const [graduationDate, setGraduationDate] = useState("2024");
 
-  // collapse
-
-  const [showPersonalInformation, setShowPersonalInformation] = useState(true);
-  const [showEducation, setShowEducation] = useState(false);
-
-  const [experience, setExperience] = useState([]);
-
-  const defaultData = {
-    defaultFirstName: "Antonio",
-    defaultLastName: "Gagliardo",
-    defaultEmail: "ajgagliardo27@gmail.com",
-    defaultPhone: "+1(236)863 2759",
-    defaultAddress: "Vancouver, Canada",
-    defaultWebsite: "www.aj-gagliardo.github.io",
-
-    defaultEducation: "University Canada West",
-    defaultMajor: "Master in Business Administration",
-    defaultGraduation: 2023,
-  };
-
   const defaultExperience = [
     {
       companyName: "Factors Group",
@@ -61,28 +41,57 @@ export default function App() {
     },
   ];
 
+  // collapse
+
+  const [showPersonalInformation, setShowPersonalInformation] = useState(true);
+  const [showEducation, setShowEducation] = useState(false);
+
+  const [experience, setExperience] = useState(defaultExperience);
+
+  const defaultData = {
+    defaultFirstName: "Antonio",
+    defaultLastName: "Gagliardo",
+    defaultEmail: "ajgagliardo27@gmail.com",
+    defaultPhone: "+1(236)863 2759",
+    defaultAddress: "Vancouver, Canada",
+    defaultWebsite: "www.aj-gagliardo.github.io",
+
+    defaultEducation: "University Canada West",
+    defaultMajor: "Master in Business Administration",
+    defaultGraduation: 2023,
+  };
+
   function handleFullNameChange(e) {
     setFullName(e);
     // console.log(firstName);
   }
 
   // have to add onClick to button with a handle function related to get the job out of the company
-  function ManageExperience(indexToDelete) {
-    function handleDeleteExperience() {
-      const changeExp = experience.filter(
-        (jobs, index) => index !== indexToDelete
+  function ManageExperience() {
+    function handleDeleteExperience(indexToDelete) {
+      console.log(indexToDelete);
+      const newExperience = experience.filter(
+        (job) => job.id !== indexToDelete
       );
-      setExperience(changeExp);
+      setExperience(newExperience);
+      // setExperience((jobs) =>
+      //   jobs.filter((job) => job.companyName !== indexToDelete.companyName)
+      // );
+      // const changeExp = experience.filter(
+      //   (index) => index !== indexToDelete
+      // );
+      // // setExperience(changeExp);
+      // console.log(indexToDelete);
     }
 
     console.log(experience.length);
     return (
       <div>
-        {experience.map((job, index) => (
+        {experience.map((job) => (
           // <div key={index}>{experience.companyName}</div>
           <div>
             {job.companyName}
-            <button onClick={handleDeleteExperience}>X</button>
+            <button onClick={() => handleDeleteExperience(job.id)}>X</button>
           </div>
         ))}
       </div>
